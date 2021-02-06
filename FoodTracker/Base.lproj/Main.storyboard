@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ElD-1n-bFx">
-                                <rect key="frame" x="0.0" y="64" width="414" height="100.5"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="459.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-Kb-sf1">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="20.5"/>
@@ -37,30 +37,39 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jnu-8m-B5k"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="e59-kV-3It">
+                                        <rect key="frame" x="0.0" y="108.5" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="e59-kV-3It" secondAttribute="height" multiplier="1:1" id="FTE-YO-xmJ"/>
+                                            <constraint firstAttribute="width" constant="320" id="zE4-CC-W06"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YEV-fO-hZf" appends="YES" id="8H9-wx-scz"/>
+                                        </connections>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bll-I8-jDa" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="436.5" width="214" height="23"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                <size key="value" width="29" height="23"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MPG-OB-LN1" secondAttribute="trailing" id="Shg-fa-GkI"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="e59-kV-3It">
-                                <rect key="frame" x="0.0" y="172.5" width="320" height="320"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="e59-kV-3It" secondAttribute="height" multiplier="1:1" id="FTE-YO-xmJ"/>
-                                    <constraint firstAttribute="width" constant="320" id="zE4-CC-W06"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="YEV-fO-hZf" appends="YES" id="8H9-wx-scz"/>
-                                </connections>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ElD-1n-bFx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4go-Ij-6xq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ElD-1n-bFx" secondAttribute="trailing" id="JHQ-De-2AY"/>
-                            <constraint firstItem="e59-kV-3It" firstAttribute="top" secondItem="ElD-1n-bFx" secondAttribute="bottom" constant="8" id="XFN-an-pwL"/>
-                            <constraint firstItem="e59-kV-3It" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YtF-3n-Ika"/>
                             <constraint firstItem="ElD-1n-bFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cZH-J7-YVr"/>
                         </constraints>
                     </view>
