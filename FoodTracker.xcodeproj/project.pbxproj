@@ -17,6 +17,7 @@
 		05393D4525CED9A200DCF0A9 /* FoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05393D4425CED9A200DCF0A9 /* FoodTrackerUITests.swift */; };
 		05393D5925CEFEA300DCF0A9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05393D5825CEFEA300DCF0A9 /* RatingControl.swift */; };
 		058A8EED25CFF9D70059E354 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A8EEC25CFF9D70059E354 /* Meal.swift */; };
+		058A8EF825CFFF360059E354 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A8EF725CFFF360059E354 /* MealTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		05393D4625CED9A200DCF0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05393D5825CEFEA300DCF0A9 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		058A8EEC25CFF9D70059E354 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		058A8EF725CFFF360059E354 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				05393D2625CED9A100DCF0A9 /* ViewController.swift */,
 				05393D5825CEFEA300DCF0A9 /* RatingControl.swift */,
 				058A8EEC25CFF9D70059E354 /* Meal.swift */,
+				058A8EF725CFFF360059E354 /* MealTableViewCell.swift */,
 				05393D2825CED9A100DCF0A9 /* Main.storyboard */,
 				05393D2B25CED9A100DCF0A9 /* Assets.xcassets */,
 				05393D2D25CED9A100DCF0A9 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			files = (
 				058A8EED25CFF9D70059E354 /* Meal.swift in Sources */,
 				05393D5925CEFEA300DCF0A9 /* RatingControl.swift in Sources */,
+				058A8EF825CFFF360059E354 /* MealTableViewCell.swift in Sources */,
 				05393D2725CED9A100DCF0A9 /* ViewController.swift in Sources */,
 				05393D2325CED9A100DCF0A9 /* AppDelegate.swift in Sources */,
 				05393D2525CED9A100DCF0A9 /* SceneDelegate.swift in Sources */,
