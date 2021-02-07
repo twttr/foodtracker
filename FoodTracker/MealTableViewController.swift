@@ -147,11 +147,11 @@ class MealTableViewController: UITableViewController {
     private func loadMeals() -> [Meal]? {
         guard let archivedData = try? Data(contentsOf: Meal.archiveURL) else {
             os_log("Failed to load archived meals", log: OSLog.default, type: .error)
-            return []
+            return nil
         }
         guard let savedMeals = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(archivedData) as? [Meal] else {
             os_log("Failed to load archived meals", log: OSLog.default, type: .error)
-            return []
+            return nil
         }
         return savedMeals
     }
