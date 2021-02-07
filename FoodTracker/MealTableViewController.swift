@@ -21,24 +21,26 @@ class MealTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return meals.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cellIdentifier = "MealTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        
+        let meal = meals[indexPath.row]
+        cell.nameLabel.text = meal.name
+        cell.photoImageView.image = meal.photo
+        cell.ratingControl.rating = meal.rating
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,7 +96,7 @@ class MealTableViewController: UITableViewController {
         
         guard let meal1 = Meal(name: "Caprese Salat", photo: photo1, rating: 4) else { fatalError("Cannot instantinate meal1") }
         guard let meal2 = Meal(name: "Chicken and Potatoes", photo: photo2, rating: 5) else { fatalError("Cannot instantinate meal2") }
-        guard let meal3 = Meal(name: "Pasta with Meatballs", photo: photo1, rating: 3) else { fatalError("Cannot instantinate meal3") }
+        guard let meal3 = Meal(name: "Pasta with Meatballs", photo: photo3, rating: 3) else { fatalError("Cannot instantinate meal3") }
         
         meals += [meal1, meal2, meal3]
     }
